@@ -7,8 +7,9 @@ def create_db():
     sql_query = """CREATE TABLE user(
         id integer PRIMARY KEY, 
         first_name text NOT NULL, 
-        email text NOT NULL, 
-        password text NOT NULL
+        email text NOT NULL UNIQUE, 
+        password VARCHAR(512) NOT NULL,
+        public_id text NOT NULL
         )"""
 
 
